@@ -1,0 +1,53 @@
+{
+    "name": "Sheets Example",
+    "description": "CRUD Operations Google Sheets in a Chrome Extension",
+    "version": "2.0.0",
+    "manifest_version": 3,
+    "action": {
+      "default_title": "Escalations Manager"
+    },
+    "icons": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+  },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    
+    "key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCtLfa+CVpdszmcgjmOfSHLcVIq5CweQgXdFoqjo2AABM4OkYe52HCX6GWN7Hl0PRI6ZRJnmIWPP06C7Kg7n8xxDkjp5Twfj0g6RB8QMgdgofNYgrpwcDV/khadSBUFeI6pOgr+bmLejXTe5aGgKrgt03YluMcvABAyUZWExNyJB3Ef//w6p5WseMDZZ3xVldBLTKRab5CVRSEECcZbA4rtNP5WLvbXZ6rhco2EQp3Zn6+asu5Bwb6jKz/W9k5q3L2K7WqIzcDTt2W4e0TCFYCdL0hshQMOlkAa8X7um5pQ/p4GSOuVa7cWNClz8EvrATLIfG2iE2piS4YUqekJzkOFAgMBAAECggEAO/IcpoR7TNL0vsnPHZUQBSmZTTKFWQX2nKSoYeN0IB2JrD5Q8pJKyzKNMLbqBcP8Es2YtNZ1aPP7e9NqmpUCgiH1OE165dvFnzGkZQlER31XzEwYOEKHKj0J6fChIi8shsSKOK9CNxJVIbDwJQ6UiXxYuc7/17OYZ6qY7IfuZNnmMrACKd6RrEym6OCDOsPJJcOAeGPkyPuv7oBnpQIFw8XbJhNotJDQlMuluoQQhqV4e5ZrBG1HzWBNCtlj2Y/HkkwTLXBwoENa8CDSkSz5UDeVR6oi1tH1l/EjH3XM8jbRb/TlVRlJvtmQ5AFhaKMGCiaVvDIrup6/R6HUSPQmEwKBgQDcNjxR7/PGjEH6ZhIa09aWfAhMKelazOFj5reSXXEU4hKvWYxrYDSf/EtIkfVZMrX+IAhEQjQOilgkjZo5Fho2ssaQkvmKxe/FjH6vbezfTFuOtUqp3zIfeoW73bvlIRZnfp6gVjzDDEhj2Rh7CJRR1kZXrJhI3IbNn4CynkNT9wKBgQDJUvsdTTdcSFJov1H4wMn8n4rH/RtbyRhf4i37qekqEj9oOde85hJdrcJ5RxM8ZRPlkaHZeCIaKod7maJsrO/4CPqsA6g2EYbK5WLpQN3ypfosL3NrwTE3obdRd4sVpK8qu/o+OWphZzyUR0g39Yf4q5tcqnpevS1CA64ufrjNYwKBgQDA0EA6ojY5p79xZwP9N3TR6KI/RgdL+M508aPUZTrJRTWFEYxwzBjn6Dlmvl4sDsnpS9TRJ4J7JMkOoGnkCCVFtX1FQ1t6Fdvehii6pC5eSnZ0WuqYGJTDmT0VhI2rjzAVyHlN/JRRWCTeQE0+FQIBMfP/emEQkv75depy+z4KewKBgC2ypEV2bYaI9AvKwbSRLkglfr7+eONQtjOth3qEiuR91960on/CSZDyDB6zP26KEwYdFHvkhPkjhjVMHk5EwwOuJhg9jEUZnVsYzmbbzoVxn2PAMZbX93AFSTM4y11SUGCG4rqVFcyePmX5+C6bkQ2lBlL2b2hp0IgXhcYQBaq5AoGBAInvjDzBJRVhWY0hhMMJmA5n8wMmjKzXDy1TcVlaoHxjgrMCEYElVxQh9E+HmdEvVb0I6ncIUw+WP7ZJtvbKXqiqr7lqR7/lbyka1IoOZRmz6JGEKZEiubqHhxBQFCSNLSo/XVEBJdqZNIoG1GE3TkSzpj/zDjUkAufJga+hO7hp",
+  "oauth2":{
+
+    "client_id":"1095274707302-83i25n07d95uf62bfcsug4fs8g3m1li8.apps.googleusercontent.com",
+    "scopes":[
+      "https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/userinfo.email", 
+      "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.readonly",
+      "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/userinfo.email"
+     
+    ]
+ },
+    "options_page": "options.html",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "activeTab",
+    "clipboardWrite",
+    "contextMenus",
+    "tabs",
+    "storage",
+    "identity",
+    "scripting"
+    
+    
+    ],
+    "host_permissions": [
+      "https://*/*",
+      "http://*/*"
+    ]
+  }
+  

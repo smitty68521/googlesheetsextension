@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    
+    <title>Sheet Sample</title>
+</head>
+<body> 
+    
+    <div class="container mx-auto">
+        
+        
+        
+    
+    
+    <div class="row">
+        <div class="col">
+    <button type="button" class="btn btn-primary float-end mt-4" id="addnewrecord">Add new Record</button>
+</div>
+    <div id="pagetitle" class="d-flex justify-content-center"><h5><strong>Sample Sheet Data</strong></h5></div>
+    <div class="mt-4" id="displaysheetdata">
+        
+    </div>  
+    <div id="recordeditview"></div>
+    </div>
+    <div class="mt-4" id="addingnewrecord" style="display:none">
+
+        <h5 class=" text-center">Add New Record</h5>
+
+        <form class="row g-3 mt-4">
+           <div class="col-md-6">
+              <label for="name" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="col-6">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="col-6">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="text" class="form-control" id="phone">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity">
+            </div>
+            
+            
+           
+            <div class="col-12">
+                <button type="button" class="btn btn-danger" id="canceladd">Cancel</button>
+              <button type="button" class="btn btn-primary" id="recordadd">Add New Record</button>
+              
+            </div>
+          </form>
+    </div>
+    
+</div>
+
+</div>
+
+    <script src="bootstrap.min.js"></script>
+    <script src="options.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>
